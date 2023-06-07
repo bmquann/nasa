@@ -1,0 +1,91 @@
+/* solar-system
+-------------------------------------------------------------------------------*/
+
+#solar-system, #preloader, #noflash, #nosupport {
+	z-index: 3;
+}
+
+.interplanet {
+	background: transparent;
+}
+
+#solar-system, .system-section {
+	.fillWidth;
+	position: relative;
+}
+
+#solar-system, .system-section, .container-fill {
+	min-width: @pageWidthMin;
+	min-height: @pageHeightMin;
+}
+
+#preloader, #noflash, #nosupport {
+	.fillTopLeft;
+}
+
+/* sections
+-------------------------------------------------------------------------------*/
+
+.system-section {
+	overflow: hidden;
+	
+	&.no-crop {
+		overflow: visible;
+	}
+}
+
+.system-section, .container-fill, .orbit, .land, .explore, .maxground, .foreground, .middleground, .background, .minground {
+    .ignore-pointer;
+}
+
+.orbit, .land, .explore {
+    position: relative;
+}
+
+.maxground, .foreground, .middleground, .background, .minground {
+    .fillMin;
+    position: absolute;
+	overflow: visible;
+}
+
+/* parallax
+-------------------------------------------------------------------------------*/
+
+.planetoid {
+	.parallaxable;
+	.full-height;
+}
+
+/* orbit
+-------------------------------------------------------------------------------*/
+
+.orbit {
+    
+}
+
+/* land
+-------------------------------------------------------------------------------*/
+
+.land {
+	#gradient-transparent > .vertical-three-colors( rgba( 51, 51, 51, 0 ), rgba( 51, 51, 51, 1 ), 50%, rgba( 51, 51, 51, 1 ) );
+}
+
+.land-bottom {
+	&:not(.mirror-vertical) {
+		#gradient-transparent > .vertical-three-colors( rgba( 51, 51, 51, 1 ), rgba( 51, 51, 51, 1 ), 50%, rgba( 51, 51, 51, 0 ) );
+	}
+}
+
+/* explore
+-------------------------------------------------------------------------------*/
+
+.explore {
+	background-color: rgba( 51, 51, 51, 1 );
+}
+
+/* golden objects
+-------------------------------------------------------------------------------*/
+
+.golden-object {
+	cursor: pointer;
+}
